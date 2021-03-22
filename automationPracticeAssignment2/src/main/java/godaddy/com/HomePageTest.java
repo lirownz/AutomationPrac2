@@ -13,27 +13,27 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@Test
-	public void testPageTitle() {
+	public void checkPageTitle() {
 		HomePage homePage = new HomePage(driver);
-		//Assert.assertEquals(driver.getTitle(),"Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
+		
 		homePage.assertEqualsText(driver.getTitle(), "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
-		//super.assertEqualsText(driver.getTitle(), "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
+		
 	}
 
 	@Test
-	public void testPageURL() {
+	public void checkPageURL() {
 		HomePage homePage = new HomePage(driver);
 		homePage.assertEqualsText(driver.getCurrentUrl(),"https://www.godaddy.com/");
 	}
 
 	@Test
-	public void testPageSource() {
+	public void checkPageSource() {
 		//printing page source
 		System.out.println(driver.getPageSource());		
 	}
 
 	@Test
-	public void validateTitleInPageSource() {
+	public void checkValidateTitleInPageSource() {
 		HomePage homePage = new HomePage(driver);
 		//checking if page source contain the page title
 		// using "boolean Assert True" to check if page source contain the wanted string
