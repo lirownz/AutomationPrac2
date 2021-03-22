@@ -6,10 +6,8 @@
       <class name="godaddy.com.HomePageTest">
         <methods>
           <include name="setUpTest"/>
-          <include name="validateTitleInPageSource"/>
+          <include name="checkValidateTitleInPageSource"/>
           <include name="teardown"/>
-          <include name="testPageTitle"/>
-          <include name="testPageURL"/>
         </methods>
       </class> <!-- godaddy.com.HomePageTest -->
     </classes>
