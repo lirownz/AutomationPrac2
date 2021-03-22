@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest {
 
-
 	@Test
 	public void checkReSizeWindow(){
 		HomePage homePage = new HomePage(driver);
