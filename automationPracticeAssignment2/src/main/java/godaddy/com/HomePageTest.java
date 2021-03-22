@@ -1,30 +1,29 @@
 package godaddy.com;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class goDaddySiteTest extends basePage {
-	
-	@BeforeClass
-	public void setUpBasePest(){
-		super.setUpBaseTest();
-	}
+
+public class HomePageTest extends BaseTest {
+
 
 	@Test
-	public void reSizeWindow(){
-		super.reSizeWindow();
+	public void checkReSizeWindow(){
+		HomePage homePage = new HomePage(driver);
+		homePage.reSizeWindow();
 	}
 
 	@Test
 	public void testPageTitle() {
+		HomePage homePage = new HomePage(driver);
 		//Assert.assertEquals(driver.getTitle(),"Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
-		super.assertEqualsText(driver.getTitle(), "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
+		homePage.assertEqualsText(driver.getTitle(), "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
+		//super.assertEqualsText(driver.getTitle(), "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
 	}
 
 	@Test
 	public void testPageURL() {
-		super.assertEqualsText(driver.getCurrentUrl(),"https://www.godaddy.com/");
+		HomePage homePage = new HomePage(driver);
+		homePage.assertEqualsText(driver.getCurrentUrl(),"https://www.godaddy.com/");
 	}
 
 	@Test
@@ -35,14 +34,10 @@ public class goDaddySiteTest extends basePage {
 
 	@Test
 	public void validateTitleInPageSource() {
+		HomePage homePage = new HomePage(driver);
 		//checking if page source contain the page title
 		// using "boolean Assert True" to check if page source contain the wanted string
 		boolean titleInPageSource = driver.getPageSource().contains("Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy IL");
-		super.assertTrueIfContain(titleInPageSource);
-	}
-
-	@AfterClass
-	public void teardownBasePage(){
-		super.teardownBaseTest();
+		homePage.assertTrueIfContain(titleInPageSource);
 	}
 }
