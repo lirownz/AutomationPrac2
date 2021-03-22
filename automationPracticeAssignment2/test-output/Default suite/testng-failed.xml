@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="godaddy.com.goDaddySiteTest">
+      <class name="godaddy.com.HomePageTest">
         <methods>
-          <include name="setUpBasePest"/>
-          <include name="teardownBasePage"/>
-          <include name="testPageURL"/>
+          <include name="setUpTest"/>
           <include name="validateTitleInPageSource"/>
+          <include name="teardown"/>
+          <include name="testPageTitle"/>
+          <include name="testPageURL"/>
         </methods>
-      </class> <!-- godaddy.com.goDaddySiteTest -->
+      </class> <!-- godaddy.com.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
