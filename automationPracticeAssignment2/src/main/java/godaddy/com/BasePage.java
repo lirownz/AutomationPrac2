@@ -14,9 +14,9 @@ public class BasePage{
 		this.driver = driver;
 	}
 
-	//	//Constructor for the godaddySite Driver
-	//	public BasePage (){
-	//	}
+	public String getPageTitle (String pageTitle) {
+		return pageTitle;
+	}
 
 	public void assertEqualsText (String actualTitle, String expectedTitle) {
 		Assert.assertEquals(actualTitle, expectedTitle);

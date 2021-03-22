@@ -19,7 +19,6 @@ public class BaseTest{
 		//Create a Chrome driver. All test classes use this.
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		//driver.navigate().to("https://www.godaddy.com/");
 		driver.manage().window().maximize();
 	}
 

@@ -10,11 +10,11 @@ public class HomePage extends BasePage {
     }
  
     //Page Variables
-    String baseURL = "https://www.godaddy.com/";
+    String baseURL = "https://www.godaddy.com";
  
     //Page Methods
     //Go to Homepage
-    public HomePage goDaddyCom (){
+    public HomePage goToURL(){
         driver.get(baseURL);
         return this;
     }
